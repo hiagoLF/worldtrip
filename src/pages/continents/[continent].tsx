@@ -1,4 +1,6 @@
+import { Flex } from "@chakra-ui/react";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { Header } from "../../components/Header";
 import { continents } from "../../data/continents.json";
 
 interface ContinentNumbers {
@@ -27,7 +29,15 @@ interface ContinentProps {
 const Continent: React.FC<ContinentProps> = ({ continent }) => {
   console.log(continent);
 
-  return <h1>Continente</h1>;
+  return (
+    <Flex direction="column">
+      <Header showGoBackLink={true} />
+      {/* <ContinentBanner
+        image={`/countries/${continent.id}`}
+        name={continent.title}
+      /> */}
+    </Flex>
+  );
 };
 
 export const getStaticPaths: GetStaticPaths = () => {

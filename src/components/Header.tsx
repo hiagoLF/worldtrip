@@ -17,7 +17,7 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ showGoBackLink = false }) => {
   return (
-    <Flex position={'relative'}>
+    <Flex position={'relative'} width={'100%'}>
       {showGoBackLink && <GoBackLink />}
 
       <Image

@@ -1,7 +1,9 @@
-import { Flex } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 import { GetStaticPaths, GetStaticProps } from "next";
+import ContinentBanner from "../../components/ContinentBanner";
 import { Header } from "../../components/Header";
 import { continents } from "../../data/continents.json";
+import { getContinentPaths } from "../../services/continents";
 
 interface ContinentNumbers {
   countries: number;
@@ -27,28 +29,30 @@ interface ContinentProps {
 }
 
 const Continent: React.FC<ContinentProps> = ({ continent }) => {
-  console.log(continent);
-
   return (
-    <Flex direction="column">
+    <VStack >
       <Header showGoBackLink={true} />
-      {/* <ContinentBanner
-        image={`/countries/${continent.id}`}
+      <ContinentBanner
+        imageUrl={`/countries/${continent.id}.jpg`}
         name={continent.title}
-      /> */}
-    </Flex>
+      />
+    </VStack>
   );
 };
 
 export const getStaticPaths: GetStaticPaths = () => {
+  const continents = getContinentPaths();
+
   return {
-    paths: [],
+    paths: continents,
     fallback: true,
   };
 };
 
 export const getStaticProps: GetStaticProps = ({ params }) => {
   const { continent } = params;
+
+  console.log("Resultado >>> ", params);
 
   const selectedContinent = continents.find(
     (currentContinent) => currentContinent.id === continent

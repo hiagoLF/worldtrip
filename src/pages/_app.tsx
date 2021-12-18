@@ -9,6 +9,9 @@ const AppTheme = {
       "90": "#DADADA",
       "20": "#F5F8FA",
     },
+    yellow: {
+      "500": "#FFBA08",
+    },
   },
   fonts: {
     heading: "Poppins",

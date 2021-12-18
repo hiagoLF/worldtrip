@@ -1,6 +1,7 @@
 import { VStack } from "@chakra-ui/react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import ContinentBanner from "../../components/ContinentBanner";
+import Details from "../../components/Details";
 import { Header } from "../../components/Header";
 import { continents } from "../../data/continents.json";
 import { getContinentPaths } from "../../services/continents";
@@ -30,12 +31,13 @@ interface ContinentProps {
 
 const Continent: React.FC<ContinentProps> = ({ continent }) => {
   return (
-    <VStack >
+    <VStack>
       <Header showGoBackLink={true} />
       <ContinentBanner
         imageUrl={`/countries/${continent.id}.jpg`}
         name={continent.title}
       />
+      <Details text={continent.textDescription} numbers={continent.numbers} />
     </VStack>
   );
 };

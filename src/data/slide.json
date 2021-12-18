@@ -1,0 +1,29 @@
+{
+  "continents": [
+    {
+      "id": "europe",
+      "title": "Europa",
+      "description": "O continente mais antigo"
+    },
+    {
+      "id": "asia",
+      "title": "Ásia",
+      "description": "O maior continente do mundo"
+    },
+    {
+      "id": "africa",
+      "title": "África",
+      "description": "O berço da humanidade"
+    },
+    {
+      "id": "oceania",
+      "title": "Oceania",
+      "description": "O novíssimo Mundo"
+    },
+    {
+      "id": "america",
+      "title": "América",
+      "description": "Abençoado por Deus e bonito por natureza"
+    }
+  ]
+}

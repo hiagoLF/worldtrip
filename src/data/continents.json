@@ -56,31 +56,31 @@
           "name": "Banguecoque",
           "country": "Tailândia",
           "id": "banguecoque.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "TH"
         },
         {
           "name": "Tóquio",
           "country": "Japão",
           "id": "toquio.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "JP"
         },
         {
           "name": "Hong Kong",
           "country": "China",
           "id": "hong_kong.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "CN"
         },
         {
           "name": "Dubai",
           "country": "Emirados Árabes",
           "id": "dubai.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "AE"
         },
         {
           "name": "Delhi",
           "country": "India",
           "id": "delhi.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "IN"
         }
       ]
     },
@@ -98,31 +98,31 @@
           "name": "Cidade do Cabo",
           "country": "África do Sul",
           "id": "cidade_cabo.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "ZA"
         },
         {
           "name": "Vinduque",
           "country": "Namíbia",
           "id": "vinduque.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "NA"
         },
         {
           "name": "Kigali",
           "country": "Ruanda",
           "id": "kigali.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "RW"
         },
         {
           "name": "Gaborone",
           "country": "Botswana",
           "id": "gaborone.jpeg",
-          "countryFlag": "GB"
+          "countryFlag": "BW"
         },
         {
           "name": "Lamu",
           "country": "Quênia",
           "id": "lamu.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "KE"
         }
       ]
     },
@@ -140,31 +140,31 @@
           "name": "Sydney",
           "country": "Austrália",
           "id": "sydney.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "AU"
         },
         {
           "name": "Melbourne",
           "country": "Austrália",
           "id": "melbourne.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "AU"
         },
         {
           "name": "Perth",
           "country": "Austrália",
           "id": "perth.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "AU"
         },
         {
           "name": "Suva",
           "country": "Fiji",
           "id": "suva.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "FJ"
         },
         {
           "name": "Apia",
-          "country": "Samoa",
+          "country": "Samoa Americana",
           "id": "apia.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "AS"
         }
       ]
     },
@@ -182,31 +182,31 @@
           "name": "Cidade do México",
           "country": "México",
           "id": "cidade_do_mexico.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "MX"
         },
         {
           "name": "Rio de Janeiro",
           "country": "Brasil",
           "id": "rio_de_janeiro.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "BR"
         },
         {
           "name": "Los Angeles",
           "country": "Estados Unidos",
           "id": "los_angeles.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "US"
         },
         {
           "name": "Lima",
           "country": "Perú",
           "id": "lima.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "PE"
         },
         {
           "name": "Quito",
           "country": "Equador",
           "id": "quito.jpg",
-          "countryFlag": "GB"
+          "countryFlag": "EC"
         }
       ]
     }

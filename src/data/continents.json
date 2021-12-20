@@ -7,7 +7,8 @@
       "numbers": {
         "countries": 50,
         "idioms": 60,
-        "cities": 27
+        "cities": 27,
+        "allCities": 10.563
       },
       "mainCities": [
         {
@@ -49,7 +50,8 @@
       "numbers": {
         "countries": 50,
         "idioms": 2.301,
-        "cities": 30
+        "cities": 30,
+        "allCities": 10.563
       },
       "mainCities": [
         {
@@ -91,7 +93,8 @@
       "numbers": {
         "countries": 54,
         "idioms": 2092,
-        "cities": 16
+        "cities": 16,
+        "allCities": 10.563
       },
       "mainCities": [
         {
@@ -133,7 +136,8 @@
       "numbers": {
         "countries": 14,
         "idioms": 820,
-        "cities": 10
+        "cities": 10,
+        "allCities": 10.563
       },
       "mainCities": [
         {
@@ -175,7 +179,8 @@
       "numbers": {
         "countries": 36,
         "idioms": 1.061,
-        "cities": 25
+        "cities": 25,
+        "allCities": 10.563
       },
       "mainCities": [
         {

@@ -11,6 +11,7 @@ interface ContinentNumbers {
   countries: number;
   idioms: number;
   cities: number;
+  allCities: number;
 }
 
 interface City {

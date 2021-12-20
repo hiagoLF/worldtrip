@@ -5,8 +5,10 @@ import {
   VStack,
   Heading,
   Box,
+  Icon,
+  Image,
 } from "@chakra-ui/react";
-import React from "react";
+import { Tooltip } from "@chakra-ui/react";
 
 // import { Container } from './styles';
 
@@ -14,6 +16,7 @@ interface ContinentNumbers {
   countries: number;
   idioms: number;
   cities: number;
+  allCities: number;
 }
 
 interface DetailsProps {
@@ -23,30 +26,29 @@ interface DetailsProps {
 
 const Details: React.FC<DetailsProps> = ({ text, numbers }) => {
   return (
-    <Box maxW={1150} py='10'>
+    <Box maxW={1150} py="10">
       <SimpleGrid px="5" minChildWidth={350} gap="5">
         <Text fontWeight="regular">{text}</Text>
 
         <HStack justifyContent={"space-between"} px={"10"}>
           <VStack>
-            <Heading fontWeight="semibold" color={"yellow.500"}>
-              {numbers.countries}
-            </Heading>
+            <Heading color={"yellow.500"}>{numbers.countries}</Heading>
             <Text fontWeight="semibold">países</Text>
           </VStack>
 
           <VStack>
-            <Heading fontWeight="semibold" color={"yellow.500"}>
-              {numbers.idioms}
-            </Heading>
-            <Text>línguas</Text>
+            <Heading color={"yellow.500"}>{numbers.idioms}</Heading>
+            <Text fontWeight="semibold">línguas</Text>
           </VStack>
 
           <VStack>
-            <Heading fontWeight="semibold" color={"yellow.500"}>
-              {numbers.cities}
-            </Heading>
-            <Text>cidades +100</Text>
+            <Heading color={"yellow.500"}>{numbers.cities}</Heading>
+            <HStack>
+              <Text fontWeight="semibold">cidades +100</Text>
+              <Tooltip label={`${numbers.allCities} cidades ao todo`}>
+                <Image src="/icons/info.svg" alt="info" width={4} />
+              </Tooltip>
+            </HStack>
           </VStack>
         </HStack>
       </SimpleGrid>

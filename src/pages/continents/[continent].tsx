@@ -1,5 +1,6 @@
 import { VStack } from "@chakra-ui/react";
 import { GetStaticPaths, GetStaticProps } from "next";
+import Cities from "../../components/Cities";
 import ContinentBanner from "../../components/ContinentBanner";
 import Details from "../../components/Details";
 import { Header } from "../../components/Header";
@@ -15,6 +16,8 @@ interface ContinentNumbers {
 interface City {
   name: string;
   country: string;
+  id: string;
+  countryFlag: string;
 }
 
 interface Continent {
@@ -27,6 +30,7 @@ interface Continent {
 
 interface ContinentProps {
   continent: Continent;
+  cities: City[];
 }
 
 const Continent: React.FC<ContinentProps> = ({ continent }) => {
@@ -38,6 +42,7 @@ const Continent: React.FC<ContinentProps> = ({ continent }) => {
         name={continent.title}
       />
       <Details text={continent.textDescription} numbers={continent.numbers} />
+      <Cities cities={continent.mainCities} />
     </VStack>
   );
 };
@@ -54,11 +59,11 @@ export const getStaticPaths: GetStaticPaths = () => {
 export const getStaticProps: GetStaticProps = ({ params }) => {
   const { continent } = params;
 
-  console.log("Resultado >>> ", params);
-
   const selectedContinent = continents.find(
     (currentContinent) => currentContinent.id === continent
   );
+
+  console.log(selectedContinent)
 
   return {
     props: {

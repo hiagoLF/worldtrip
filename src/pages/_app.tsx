@@ -6,6 +6,7 @@ const AppTheme = {
   colors: {
     gray: {
       "500": "#47585B",
+      '300': "#999999",
       "90": "#DADADA",
       "20": "#F5F8FA",
     },

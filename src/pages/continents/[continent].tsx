@@ -63,8 +63,6 @@ export const getStaticProps: GetStaticProps = ({ params }) => {
     (currentContinent) => currentContinent.id === continent
   );
 
-  console.log(selectedContinent)
-
   return {
     props: {
       continent: selectedContinent,

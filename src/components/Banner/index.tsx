@@ -1,13 +1,29 @@
-import { Flex, HStack, Box, Heading, Image, VStack } from "@chakra-ui/react";
+import {
+  Flex,
+  HStack,
+  Heading,
+  Image,
+  VStack,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import React from "react";
 
-// import { Container } from './styles';
-
 const Banner: React.FC = () => {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  });
+
   return (
     <Flex backgroundImage="url('/trand/bg_banner.png')">
-      <HStack flex="1" justifyContent="space-between" maxW={1148} mx="auto">
-        <VStack spacing="5" align='flex-start'>
+      <HStack
+        flex="1"
+        justifyContent="space-between"
+        maxW={1148}
+        mx="auto"
+        px={"3"}
+      >
+        <VStack spacing="5" align="flex-start" py={55} pl={!isWideVersion && 15}>
           <Heading
             fontSize="3xl"
             color="gray.20"
@@ -27,11 +43,13 @@ const Banner: React.FC = () => {
             5 Chegou a Hora de tirar do papel a viagem que você sempre sonhou
           </Heading>
         </VStack>
-        <Image
-          src="/trand/airplane.svg"
-          alt="Avião"
-          transform="translateY(30px)"
-        />
+        {isWideVersion && (
+          <Image
+            src="/trand/airplane.svg"
+            alt="Avião"
+            transform="translateY(30px)"
+          />
+        )}
       </HStack>
     </Flex>
   );

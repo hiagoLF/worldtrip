@@ -4,8 +4,12 @@ import Cities from "../../components/Cities";
 import ContinentBanner from "../../components/ContinentBanner";
 import Details from "../../components/Details";
 import { Header } from "../../components/Header";
-import { continents } from "../../data/continents.json";
-import { getContinentPaths } from "../../services/continents";
+import { continents } from "../../data/continents.content.json";
+
+// import {
+//   getContinentPaths,
+//   getContinentProps,
+// } from "../../services/continents";
 
 interface ContinentNumbers {
   countries: number;
@@ -49,24 +53,24 @@ const Continent: React.FC<ContinentProps> = ({ continent }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = () => {
-  const continents = getContinentPaths();
+  const continentsPaths = continents.map((continents) => ({
+    params: { continent: continents.id },
+  }));
 
   return {
-    paths: continents,
-    fallback: true,
+    paths: continentsPaths,
+    fallback: false,
   };
 };
 
 export const getStaticProps: GetStaticProps = ({ params }) => {
   const { continent } = params;
 
-  const selectedContinent = continents.find(
-    (currentContinent) => currentContinent.id === continent
-  );
+  const continentProps = continents.find((current) => current.id === continent);
 
   return {
     props: {
-      continent: selectedContinent,
+      continent: continentProps,
     },
   };
 };

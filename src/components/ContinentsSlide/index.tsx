@@ -1,16 +1,25 @@
 import React from "react";
-import { Box, Heading, Text, VStack, Image } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import SlideElement from "./SlideElement";
-import { continents } from "../../data/slide.json";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const ContinentsSlide: React.FC = () => {
+interface Continent {
+  id: string;
+  title: string;
+  description: string;
+}
+
+interface ContinentsSlideProps {
+  continents: Continent[];
+}
+
+const ContinentsSlide: React.FC<ContinentsSlideProps> = ({ continents }) => {
   return (
     <Box w="100%" maxW={1148} mx="auto" mb="10">
       <Swiper
